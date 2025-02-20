@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Import Lucide icons
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -25,7 +25,6 @@ const Navbar = () => {
             </div>
           </Link>
 
-          {/* Live Service Indicator */}
           <div className="hidden md:flex items-center space-x-2 px-4 py-2 rounded-full bg-secondary text-white">
             <span className="animate-pulse inline-block h-3 w-3 rounded-full bg-white"></span>
             <span className="text-sm font-medium">
@@ -33,7 +32,6 @@ const Navbar = () => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6 text-white items-center">
             <Link to="/" className="hover:text-accent transition-colors py-2">
               Home
@@ -64,17 +62,14 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
             className="md:hidden text-white focus:outline-none"
           >
             {isMobileNavOpen ? <X size={30} /> : <Menu size={30} />}{" "}
-            {/* Toggle Icons */}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileNavOpen && (
           <div className="md:hidden mt-4 rounded-lg overflow-hidden bg-primary p-4 space-y-4">
             <Link
