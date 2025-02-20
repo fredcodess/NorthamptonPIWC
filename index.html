@@ -1,9 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/media/logo.JPG" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      @layer base {
+        /* Extend Tailwind's theme with custom colors */
+        :root {
+          --color-primary: #4b93a2;
+          --color-secondary: #317a86;
+          --color-accent: #72b5c1;
+        }
+
+        /* Use these custom colors in Tailwind's utility classes */
+        .bg-primary {
+          background-color: var(--color-primary);
+        }
+        .bg-secondary {
+          background-color: var(--color-secondary);
+        }
+        .bg-accent {
+          background-color: var(--color-accent);
+        }
+
+        .text-primary {
+          color: var(--color-primary);
+        }
+        .text-secondary {
+          color: var(--color-secondary);
+        }
+        .text-accent {
+          color: var(--color-accent);
+        }
+      }
+    </style>
     <title>Vite + React</title>
   </head>
   <body>
